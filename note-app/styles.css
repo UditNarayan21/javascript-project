@@ -1,0 +1,201 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+textarea, input {
+    outline: none;
+}
+button{cursor: pointer;}
+::placeholder {
+    color: #555;
+}
+::-webkit-scrollbar{
+    width: 3px;
+    background-color: rgba(85, 85, 85, 0.267);
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+.container .note .header .btn-active {
+    background-color: rgba(0, 0, 0, 0.090);
+}
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+.note .dropdown-content .text-red{
+    color: crimson;
+}
+
+.color-btn-group .color-btn:hover{outline: 2px solid #333;}
+#magicMint{ background-color: #ADEAC3;}
+#paleRobinBlue{ background-color: #90DAD9;}
+#dutchWhite{ background-color: #F2DDC0;}
+#spanishPink{ background-color: #F3BEBC;}
+#lightOrchid{ background-color: #E7A8E3;}
+#bluePurple{ background-color: #A09CF3;}
+
+.bg-slate{background-color: #fffdf1;}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav{
+    min-height: 60px;
+    padding: 0 15%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .add{
+    background-color: springgreen;
+    border: 0;
+    padding: 0.5rem 0.825rem;
+    border-radius: 4px;
+}
+nav .add:hover{
+    outline: 3px solid rgba(0, 255, 128, 0.2);
+}
+nav .add:active, .note .header button:active{
+    transform: scale(0.95); 
+}
+ .container{   
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 15%;    
+    
+}
+.container .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start; 
+    gap: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container .row {
+        justify-content: center;
+    }
+}
+ 
+.note {    
+    width: 300px;    
+    height: 300px;     
+    transition: all 0.4s ease-in;   
+    border-radius: 8px; 
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.085);           
+}
+.note:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+}
+.note .header{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem 0 1rem;
+    background-color: rgba(0, 0, 0, 0.035);
+    position: relative;
+}
+.note .header .dropbtn{
+    border: none;
+    background-color: transparent;    
+    height: 2.5rem;
+    width: 2.6rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.note .header .dropbtn i{pointer-events: none;}
+.note .title {
+    font-size: 1.3rem;
+    color: rgb(31, 53, 100);
+    width: 100%;
+    font-weight: 600;    
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+}
+.note .header .dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 61%;   
+    width: 180px;
+    border-radius: 8px;
+    height: auto;
+    background-color: white; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   
+    padding: 0.75rem 0;
+    z-index: 999;
+}
+.note .header .dropdown-content small{
+    margin: 0.75rem 0.75rem 0 0.75rem;
+}
+.note .header .dropdown-content .color-btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;     
+    padding: 0.75rem;
+}
+.note .header .dropdown-content .color-btn-group .color-btn{
+    height: 1rem;
+    width: 1rem;
+    border: 0;
+    border-radius: 1rem;    
+}
+
+.note .header .dropdown-content a{
+    display: block;
+    margin: 0;
+    cursor: pointer;   
+    padding: 0.5rem 1rem ;
+    text-decoration: none;    
+}
+.note .header .dropdown-content a:hover{
+    background-color: rgba(220, 20, 60, 0.050);
+}
+
+.note .header .show{
+    display: block;
+}
+.note .notes-textarea{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    resize: none;
+    overflow-y: auto;    
+    padding:  0.75rem 1rem;
+    background-color: transparent; 
+    height: 250px;   
+    min-width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;    
+} 
+
+
+.test {
+    width: 200px;
+    height: 20px;
+    background-color: #ddd;
+}
+
+footer{
+    text-align: center;
+    position: fixed;
+    bottom: 0;     
+    width: 100%;   
+    padding: 0.25rem 0; 
+    background-color: #fff;
+    border-top: 1px solid #ddd ;
+    box-sizing: border-box;
+    z-index: 1;
+} 
